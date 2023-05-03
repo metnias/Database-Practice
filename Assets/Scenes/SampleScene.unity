@@ -1312,6 +1312,7 @@ GameObject:
   - component: {fileID: 300607859}
   - component: {fileID: 300607858}
   - component: {fileID: 300607857}
+  - component: {fileID: 300607860}
   m_Layer: 5
   m_Name: BtnLogin
   m_TagString: Untagged
@@ -1434,6 +1435,33 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 300607855}
   m_CullTransparentMesh: 1
+--- !u!114 &300607860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 300607855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83db2ee04b8e8604481e3cf1da554950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onEnterPressed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 547917112}
+        m_TargetAssemblyTypeName: FormLogIn, Assembly-CSharp
+        m_MethodName: AttemptLogIn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -1679,6 +1707,7 @@ GameObject:
   - component: {fileID: 414899936}
   - component: {fileID: 414899935}
   - component: {fileID: 414899934}
+  - component: {fileID: 414899937}
   m_Layer: 5
   m_Name: BtnBack
   m_TagString: Untagged
@@ -1720,12 +1749,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
+    m_SelectOnUp: {fileID: 621403238}
+    m_SelectOnDown: {fileID: 2078273063}
     m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnRight: {fileID: 587359206}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -1801,6 +1830,33 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 414899932}
   m_CullTransparentMesh: 1
+--- !u!114 &414899937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414899932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83db2ee04b8e8604481e3cf1da554950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onEnterPressed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 495169767}
+        m_TargetAssemblyTypeName: FormSignUp, Assembly-CSharp
+        m_MethodName: SwitchToLogIn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &438443485
 GameObject:
   m_ObjectHideFlags: 0
@@ -1969,6 +2025,7 @@ GameObject:
   - component: {fileID: 439144427}
   - component: {fileID: 439144426}
   - component: {fileID: 439144425}
+  - component: {fileID: 439144428}
   m_Layer: 5
   m_Name: InputID
   m_TagString: Untagged
@@ -2134,6 +2191,33 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 439144423}
   m_CullTransparentMesh: 1
+--- !u!114 &439144428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439144423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83db2ee04b8e8604481e3cf1da554950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onEnterPressed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1567785164}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
+        m_MethodName: Select
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &456544223
 GameObject:
   m_ObjectHideFlags: 0
@@ -2995,6 +3079,7 @@ GameObject:
   - component: {fileID: 587359208}
   - component: {fileID: 587359207}
   - component: {fileID: 587359206}
+  - component: {fileID: 587359209}
   m_Layer: 5
   m_Name: BtnSignUp
   m_TagString: Untagged
@@ -3036,11 +3121,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnUp: {fileID: 621403238}
+    m_SelectOnDown: {fileID: 2078273063}
+    m_SelectOnLeft: {fileID: 414899934}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
@@ -3117,6 +3202,33 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 587359204}
   m_CullTransparentMesh: 1
+--- !u!114 &587359209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 587359204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83db2ee04b8e8604481e3cf1da554950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onEnterPressed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 495169767}
+        m_TargetAssemblyTypeName: FormSignUp, Assembly-CSharp
+        m_MethodName: AttemptSignUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &589950431
 GameObject:
   m_ObjectHideFlags: 0
@@ -3223,6 +3335,7 @@ GameObject:
   - component: {fileID: 621403240}
   - component: {fileID: 621403239}
   - component: {fileID: 621403238}
+  - component: {fileID: 621403241}
   m_Layer: 5
   m_Name: InputPW2
   m_TagString: Untagged
@@ -3264,10 +3377,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
+    m_SelectOnUp: {fileID: 1528484970}
+    m_SelectOnDown: {fileID: 587359206}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
@@ -3387,6 +3500,33 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 621403236}
   m_CullTransparentMesh: 1
+--- !u!114 &621403241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 621403236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83db2ee04b8e8604481e3cf1da554950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onEnterPressed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 495169767}
+        m_TargetAssemblyTypeName: FormSignUp, Assembly-CSharp
+        m_MethodName: AttemptSignUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -3759,6 +3899,7 @@ GameObject:
   - component: {fileID: 952972609}
   - component: {fileID: 952972608}
   - component: {fileID: 952972607}
+  - component: {fileID: 952972610}
   m_Layer: 5
   m_Name: BtnSignUp
   m_TagString: Untagged
@@ -3881,6 +4022,33 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 952972605}
   m_CullTransparentMesh: 1
+--- !u!114 &952972610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 952972605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83db2ee04b8e8604481e3cf1da554950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onEnterPressed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 547917112}
+        m_TargetAssemblyTypeName: FormLogIn, Assembly-CSharp
+        m_MethodName: SwitchToSignUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &955220220
 GameObject:
   m_ObjectHideFlags: 0
@@ -4235,6 +4403,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1164982239}
   - component: {fileID: 1164982240}
+  - component: {fileID: 1164982241}
   m_Layer: 5
   m_Name: TglSaveID
   m_TagString: Untagged
@@ -4324,6 +4493,21 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   m_IsOn: 0
+--- !u!114 &1164982241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164982238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83db2ee04b8e8604481e3cf1da554950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onEnterPressed:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1218179858
 GameObject:
   m_ObjectHideFlags: 0
@@ -5267,6 +5451,7 @@ GameObject:
   - component: {fileID: 1528484972}
   - component: {fileID: 1528484971}
   - component: {fileID: 1528484970}
+  - component: {fileID: 1528484973}
   m_Layer: 5
   m_Name: InputPW
   m_TagString: Untagged
@@ -5309,10 +5494,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
+    m_SelectOnUp: {fileID: 2078273063}
+    m_SelectOnDown: {fileID: 621403238}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
@@ -5432,6 +5617,33 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1528484968}
   m_CullTransparentMesh: 1
+--- !u!114 &1528484973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528484968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83db2ee04b8e8604481e3cf1da554950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onEnterPressed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 621403238}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
+        m_MethodName: Select
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1563621076
 GameObject:
   m_ObjectHideFlags: 0
@@ -5600,6 +5812,7 @@ GameObject:
   - component: {fileID: 1567785166}
   - component: {fileID: 1567785165}
   - component: {fileID: 1567785164}
+  - component: {fileID: 1567785167}
   m_Layer: 5
   m_Name: InputPW
   m_TagString: Untagged
@@ -5765,6 +5978,33 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1567785162}
   m_CullTransparentMesh: 1
+--- !u!114 &1567785167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567785162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83db2ee04b8e8604481e3cf1da554950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onEnterPressed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 547917112}
+        m_TargetAssemblyTypeName: FormLogIn, Assembly-CSharp
+        m_MethodName: AttemptLogIn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1715754155
 GameObject:
   m_ObjectHideFlags: 0
@@ -5912,6 +6152,7 @@ GameObject:
   - component: {fileID: 1726293665}
   - component: {fileID: 1726293664}
   - component: {fileID: 1726293663}
+  - component: {fileID: 1726293666}
   m_Layer: 5
   m_Name: BtnLogOut
   m_TagString: Untagged
@@ -5953,12 +6194,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnRight: {fileID: 1733896239}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -6034,6 +6275,33 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1726293661}
   m_CullTransparentMesh: 1
+--- !u!114 &1726293666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726293661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83db2ee04b8e8604481e3cf1da554950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onEnterPressed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 589950435}
+        m_TargetAssemblyTypeName: FormUserPage, Assembly-CSharp
+        m_MethodName: LogOut
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1733896237
 GameObject:
   m_ObjectHideFlags: 0
@@ -6046,6 +6314,7 @@ GameObject:
   - component: {fileID: 1733896241}
   - component: {fileID: 1733896240}
   - component: {fileID: 1733896239}
+  - component: {fileID: 1733896242}
   m_Layer: 5
   m_Name: BtnKill
   m_TagString: Untagged
@@ -6087,11 +6356,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnLeft: {fileID: 1726293663}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
@@ -6168,6 +6437,33 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1733896237}
   m_CullTransparentMesh: 1
+--- !u!114 &1733896242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733896237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83db2ee04b8e8604481e3cf1da554950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onEnterPressed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 589950435}
+        m_TargetAssemblyTypeName: FormUserPage, Assembly-CSharp
+        m_MethodName: ConfirmDeletion
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1777381881
 GameObject:
   m_ObjectHideFlags: 0
@@ -6921,6 +7217,7 @@ GameObject:
   - component: {fileID: 2078273065}
   - component: {fileID: 2078273064}
   - component: {fileID: 2078273063}
+  - component: {fileID: 2078273066}
   m_Layer: 5
   m_Name: InputID
   m_TagString: Untagged
@@ -6963,11 +7260,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnUp: {fileID: 587359206}
+    m_SelectOnDown: {fileID: 1528484970}
+    m_SelectOnLeft: {fileID: 587359206}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
@@ -7086,6 +7383,33 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2078273061}
   m_CullTransparentMesh: 1
+--- !u!114 &2078273066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078273061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83db2ee04b8e8604481e3cf1da554950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onEnterPressed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1528484970}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
+        m_MethodName: Select
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2080928014
 GameObject:
   m_ObjectHideFlags: 0

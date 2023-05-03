@@ -59,6 +59,9 @@ public class PopupController : MonoBehaviour
     public void Activate()
     {
         gameObject.SetActive(true);
+        for (int i = buttons.Length - 1; i >= 0; --i)
+            if (buttons[i] != null)
+            { buttons[i].GetComponent<Button>().Select(); break; }
     }
 
     public void Deactivate()
