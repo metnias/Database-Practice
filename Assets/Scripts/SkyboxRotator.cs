@@ -10,5 +10,8 @@ public class SkyboxRotator : MonoBehaviour
     private void Update()
     {
         RenderSettings.skybox.SetFloat("_Rotation", Time.time * speed);
+        var rot = transform.rotation.eulerAngles;
+        rot.y = Time.time * speed;
+        transform.rotation = Quaternion.Euler(rot);
     }
 }
