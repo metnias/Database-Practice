@@ -65,7 +65,6 @@ public class UIController : MonoBehaviour
 
     private FormType currentForm = FormType.Login;
 
-
     private FormLogIn formLogIn = null;
     private FormSignUp formSignUp = null;
     private FormUserPage formUserPage = null;
@@ -83,10 +82,18 @@ public class UIController : MonoBehaviour
         currentForm = newForm;
         switch (currentForm)
         {
-            case FormType.Login: formLogIn.gameObject.SetActive(true); break;
-            case FormType.SignUp: formSignUp.gameObject.SetActive(true); break;
-            case FormType.UserPage: formUserPage.gameObject.SetActive(true); formUserPage.UpdateUsername(UserID); break;
+            case FormType.Login:
+                formLogIn.gameObject.SetActive(true);
+                break;
+            case FormType.SignUp:
+                formSignUp.gameObject.SetActive(true);
+                break;
+            case FormType.UserPage:
+                formUserPage.gameObject.SetActive(true);
+                formUserPage.UpdateUsername(UserID);
+                break;
         }
+        CameraController.Instance().SetGoal(currentForm);
     }
 
     #endregion
@@ -94,7 +101,5 @@ public class UIController : MonoBehaviour
     public string UserID { get; private set; } = string.Empty;
 
     public void UpdateUserID(string newID) => UserID = newID;
-
-
 
 }

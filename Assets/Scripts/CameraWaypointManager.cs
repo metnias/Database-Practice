@@ -108,6 +108,18 @@ public class CameraWaypointManager : MonoBehaviour
 
     public CameraWaypoint FindNearestPoint(Transform tf)
     {
-        return null;
+        CameraWaypoint closestWp = null; float dist = float.MaxValue;
+        foreach (var wp in waypoints)
+        {
+            if (!wp) continue;
+            float curDist = Vector3.Distance(wp.transform.position, tf.position);
+            if (dist > curDist)
+            {
+                dist = curDist;
+                closestWp = wp;
+            }
+        }
+        if (closestWp) return closestWp;
+        return waypoints[0];
     }
 }
