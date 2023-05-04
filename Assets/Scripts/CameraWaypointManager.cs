@@ -71,6 +71,12 @@ public class CameraWaypointManager : MonoBehaviour
     internal Queue<CameraWaypoint> FindPath(CameraWaypoint startPoint, CameraWaypoint goalPoint)
     {
         if (!startPoint || !goalPoint) return new();
+        if (startPoint == goalPoint)
+        {
+            Queue<CameraWaypoint> onePath = new();
+            onePath.Enqueue(goalPoint);
+            return onePath;
+        }
 
         int start = GetFlagIndex(startPoint);
         int goal = GetFlagIndex(goalPoint);

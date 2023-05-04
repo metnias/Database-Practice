@@ -13,8 +13,10 @@ public class CameraController : MonoBehaviour
     private float moveAcc = 1f;
     [SerializeField, Range(0f, 50f)]
     private float moveMaxSpeed = 4f;
-    [SerializeField, Range(0f, 1f)]
+    [SerializeField, Range(0f, 10f)]
     private float waypointBound = 0.2f;
+    [SerializeField, Range(0f, 30f)]
+    private float drag = 1f;
 
     [Header("Waypoints")]
     [SerializeField]
@@ -52,40 +54,44 @@ public class CameraController : MonoBehaviour
 
         waypoints = CameraWaypointManager.Instance().FindPath(startPoint, goalPoint);
 
-        if (camerawork != null) StopCoroutine(camerawork);
-        if (waypoints.Count > 0) StartCoroutine(CameraworkCoroutine());
+        if (camerawork != null) StopAllCoroutines();
+        if (waypoints.Count > 0) camerawork = StartCoroutine(CameraworkCoroutine());
     }
 
     private Rigidbody rBody = null;
     private Vector3 vel;
-    private Vector3 angle;
 
     private IEnumerator CameraworkCoroutine()
     {
         vel = Vector3.zero;
-        angle = transform.rotation.eulerAngles;
+        CameraWaypoint wp = null;
         while (waypoints.Count > 0)
         {
-            var wp = waypoints.Peek();
+            wp = waypoints.Peek();
             var relPos = wp.transform.position - transform.position;
-            vel *= 1f - (moveAcc * 0.05f * Time.deltaTime);
-            vel += moveAcc * Time.deltaTime * relPos.normalized;
+            vel *= Mathf.Clamp01(1f - (drag * (waypoints.Count > 2 ? 1f : 2f) * Time.deltaTime));
+            vel += moveAcc * Time.deltaTime * Vector3.ClampMagnitude(relPos, 1f);
             vel = Vector3.ClampMagnitude(vel, moveMaxSpeed);
-            angle = Vector3.Slerp(angle, wp.transform.rotation.eulerAngles, 2f * Time.deltaTime);
             rBody.velocity = vel;
-            rBody.rotation = Quaternion.Euler(angle);
+            transform.rotation = Quaternion.Slerp(transform.rotation, wp.transform.rotation, 2f * Time.deltaTime);
             yield return null;
             if (Vector3.Distance(transform.position, wp.transform.position) < waypointBound
                 && Quaternion.Angle(transform.rotation, wp.transform.rotation) < 10f)
                 waypoints.Dequeue();
         }
-        while (vel.magnitude > 0.1f)
+        while (Vector3.Distance(transform.position, wp.transform.position) > 0.1f
+            || Quaternion.Angle(transform.rotation, wp.transform.rotation) > 0.1f)
         {
-            vel *= 1f - (moveAcc * 0.05f * Time.deltaTime);
+            var relPos = wp.transform.position - transform.position;
+            vel *= Mathf.Clamp01(1f - (drag * 3f * Time.deltaTime));
+            vel += moveAcc * Time.deltaTime * relPos.normalized;
+            vel = Vector3.ClampMagnitude(vel, moveMaxSpeed);
             rBody.velocity = vel;
+            transform.rotation = Quaternion.Slerp(transform.rotation, wp.transform.rotation, 5f * Time.deltaTime);
             yield return null;
         }
         rBody.velocity = Vector3.zero;
+        transform.rotation = wp.transform.rotation;
         camerawork = null;
     }
 }
