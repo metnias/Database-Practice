@@ -7,6 +7,9 @@ public class UIController : MonoBehaviour
 
     public static bool MenuFreeze { get; private set; }
 
+    [SerializeField]
+    private JammoControl player;
+
     private void Awake()
     {
         if (!_instance)
@@ -91,6 +94,7 @@ public class UIController : MonoBehaviour
             case FormType.UserPage:
                 formUserPage.gameObject.SetActive(true);
                 formUserPage.UpdateUsername(UserID);
+                player.ReadyPlayerOne(UserID);
                 break;
         }
         CameraController.Instance().SetGoal(currentForm);
